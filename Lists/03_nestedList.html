@@ -1,0 +1,43 @@
+<!-- 
+    Nested Lists in HTML
+
+    - A nested list means placing one list inside another <li> item.
+    - You can nest ordered lists (<ol>) inside unordered lists (<ul>) and vice versa.
+    - Useful for showing sub-items, categories, or breakdowns within a list.
+    - Structure example:
+        <ul>
+            <li>Main Item
+                <ol>
+                    <li>Sub Item</li>
+                </ol>
+            </li>
+        </ul>
+    - Nesting helps organize complex data clearly and hierarchically.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nested Lists in HTML</title>
+    </head>
+    <body>
+        <!-- Unordered main list -->
+        <ul>
+            <li>Fruits
+                <!-- Nested ordered list inside the 'Fruits' item -->
+                <ol type="a">
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Orange</li>
+                </ol>
+            </li>
+            <li>Vegetables
+                <!-- Nested unordered list inside the 'Vegetables' item -->
+                <ul type="square">
+                    <li>Carrot</li>
+                    <li>Spinach</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
