@@ -1,0 +1,60 @@
+<!-- 
+    <img> Element in HTML
+
+    Purpose:
+    - Used to embed images in a web page.
+
+    Key Attributes:
+    1. src (source):
+        - Specifies the path (URL or local file) to the image.
+        - Example: src="images/photo.jpg" or src="https://example.com/photo.jpg"
+
+    2. alt (alternative text):
+        - Provides descriptive text if the image cannot be displayed.
+        - Improves accessibility for screen readers.
+        - Helps SEO by describing the image content.
+
+    3. width and height (optional):
+        - Set the display size of the image (in pixels).
+        - Example: width="200" height="100"
+
+    Best Practices:
+    - Always include the alt attribute for accessibility.
+    - Prefer relative paths for local images to avoid broken links.
+    - Use descriptive alt text relevant to the image content.
+
+    Example:
+    <img src="images/logo.png" alt="Company Logo" width="150" height="50">
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Tag</title>
+    </head>
+    <body>
+        <!-- <img> tag is used to display images in HTML -->
+
+        <!-- 
+            'src' (source) attribute contains the image URL or file path
+            You can use:
+              - Absolute URL (like the one below) to load image from the internet
+              - Relative URL to load an image from your local project folder
+              
+            NOTE: Using absolute URLs is quick, but risky if the external image is deleted or changed it can also crash on your webpage.
+            Best practice is to store and use local (relative) image files when possible.
+        -->
+
+        <!-- 
+            'alt' (alternative text) attribute:
+            - Displays descriptive text when the image cannot be loaded
+            - Helps with accessibility and SEO
+        -->
+
+        <img src="https://wallpapercave.com/wp/wp1937346.png" alt="Image"> <!--Absolute Link image-->
+        <!-- Note: The link used in this example is an absolute URL (from the internet) -->
+
+        <!-- Note: To use a relative link, you need to download the image and place it in the same folder as your project -->
+        <img src="image.webp" alt="image"> <!--Relative Link image-->
+    </body>
+</html>
