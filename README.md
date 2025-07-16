@@ -28,3 +28,20 @@ This level focuses on learning the foundational building blocks of HTML — how 
 - HTML Boilerplate Code  
 
 ---
+
+### 📗 Level 2: HTML Layout & Semantics
+
+This level introduces layout concepts, semantic structure, inline vs block elements, and other useful tags for clean and meaningful HTML.
+
+- Inline vs Block Elements  
+- `<div>` Element  
+- `<span>` Element  
+- `<hr>` Tag  
+- Superscript (`<sup>`) & Subscript (`<sub>`) Tags  
+- Semantic Markup  
+- Semantic Tags (`<header>`, `<nav>`, `<main>`, `<footer>`, etc.)  
+- HTML Entities (e.g., `&copy;`, `&amp;`, `&lt;`)  
+- Emmet Abbreviations (HTML productivity shortcuts)  
+- Practice Questions  
+
+---
