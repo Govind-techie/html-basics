@@ -1,0 +1,60 @@
+<!-- 
+  HTML Entities:
+
+  - HTML entities are special codes used to display reserved characters in HTML.
+  - They start with & and end with ; (e.g., &lt; for <, &gt; for >).
+  - Useful for displaying symbols, accented characters, and invisible characters.
+  - Common examples:
+      &lt;   displays <
+      &gt;   displays >
+      &amp;  displays &
+      &quot; displays "
+      &apos; displays '
+  - Prevents conflicts with HTML syntax and ensures correct rendering.
+
+  Note:
+    • An HTML entity is a piece of text ("string") that begins with an ampersand (&) and ends with a semicolon (;).
+    • used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces).
+    • can also use in place of characters that are difficult to type with a standard keyboard.
+    • browser interprets them & renders correct character
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Entities Example</title>
+</head>
+<body>
+
+    <!-- HTML entities are used to display reserved or special characters in HTML -->
+
+    <h1>Common HTML Entities</h1>
+
+    <!-- The ampersand (&) is a reserved character, so we use &amp; -->
+    <p>This is how you write an ampersand: <b>&amp;</b></p>
+
+    <!-- Less-than and greater-than signs must be escaped or they might break the HTML -->
+    <p>To show HTML tags in text: <b>&lt;p&gt;Hello&lt;/p&gt;</b></p>
+
+    <!-- Quotes inside attributes can be written using entities -->
+    <p>Double Quote: <b>&quot;Hello&quot;</b></p>
+    <p>Single Quote: <b>&apos;Hello&apos;</b></p>
+
+    <!-- The copyright symbol -->
+    <p>Copyright 2025 <b>&copy;</b> Govind Choudhary</p>
+
+    <!-- Trademark and registered trademark -->
+    <p>MyBrand&trade; is now officially <b>&reg;</b></p>
+
+    <!-- Arrows and math symbols -->
+    <p>5 &lt; 10 and 10 &gt; 5</p>
+    <p>10 &divide; 2 = 5</p>
+    <p>2 &times; 3 = 6</p>
+    <p>Pi is approximately <b>&pi; = 3.14</b></p>
+
+    <!-- Adding non-breaking space -->
+    <p>Govind&nbsp;&nbsp;&nbsp;Choudhary (with extra spacing using non-breaking spaces)</p>
+</body>
+</html>
