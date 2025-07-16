@@ -10,15 +10,21 @@ I’ll be updating this repository regularly with new topics, examples, and impr
 
 ## 📚 Topics Covered
 
-- Basic HTML Document Structure
-- Common HTML Tags & Elements
-- Using HTML Attributes
-- Anchor (`<a>`) Elements (Links)
-- Image (`<img>`) Elements
-- Working with Lists:
-  - Unordered Lists (`<ul>`)
-  - Ordered Lists (`<ol>`)
-  - List Items (`<li>`)
-- Headings (`<h1>`–`<h6>`)
-- Paragraphs (`<p>`)
-- HTML Boilerplate Code
+### 📘 Level 1: HTML Fundamentals
+
+This level focuses on learning the foundational building blocks of HTML — how to structure a basic webpage, use essential tags, and understand how elements behave in a document.
+
+- Basic HTML Document Structure  
+- Common HTML Tags & Elements  
+- Using HTML Attributes  
+- Anchor (`<a>`) Elements (Links)  
+- Image (`<img>`) Elements  
+- Working with Lists:  
+  - Unordered Lists (`<ul>`)  
+  - Ordered Lists (`<ol>`)  
+  - List Items (`<li>`)  
+- Headings (`<h1>`–`<h6>`)  
+- Paragraphs (`<p>`)  
+- HTML Boilerplate Code  
+
+---
