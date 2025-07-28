@@ -1,0 +1,67 @@
+<!--
+HTML Tables - Quick Notes
+
+<table>   : Defines the table
+<tr>      : Table row
+<td>      : Table data cell (regular cell)
+<th>      : Table header cell (bold, centered)
+
+<thead>   : Groups header content (optional)
+<tbody>   : Groups main body content (optional)
+<tfoot>   : Groups footer content like totals (optional)
+<caption> : Adds a title to the table
+
+colspan   : Merges multiple columns into one cell
+rowspan   : Merges multiple rows into one cell
+
+Best Use:
+- Use <th> for headings
+- Keep structure semantic with <thead>, <tbody>, <tfoot>
+- Use <caption> for clarity
+- Avoid using tables for page layout
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Table</title>
+    </head>
+    <body>
+        <!-- Table with border: Adds a visible border to the table (Note: Using the 'border' attribute is outdated; it's better to use CSS for styling. HTML should only define structure.) -->
+        <table border>
+
+            <!-- Table caption: Provides a title or description for the table -->
+            <caption>Food Menu</caption>
+
+            <!-- Table header section: Groups the header row of the table -->
+            <thead> 
+                <tr>
+                    <th>Item</th>   <!-- Column header for food item -->
+                    <th>Price</th>  <!-- Column header for price -->
+                </tr>
+            </thead>
+
+            <!-- Table body section: Contains the main content (data rows) of the table -->
+            <tbody> 
+                <tr>
+                    <td>Samosa</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Dosa</td>       
+                    <td>35</td>        
+                </tr>
+                <tr>
+                    <td>VadaPav</td>    
+                    <td>20</td>
+                </tr>
+            </tbody>
+
+            <!-- Optional: You can add a <tfoot> section if you need a footer for the table (e.g., total price or summary) -->
+            
+        </table>
+    </body>
+</html>
+

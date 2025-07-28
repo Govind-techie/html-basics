@@ -1,0 +1,63 @@
+<!--
+Colspan & Rowspan
+
+- colspan: Attribute for <th> or <td> to merge columns
+  - Syntax: <td colspan="2">Content</td>
+- rowspan: Attribute for <th> or <td> to merge rows
+  - Syntax: <td rowspan="2">Content</td>
+- Use for headings, totals, or cells that span multiple columns/rows
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colspan & Rowspan</title>
+    </head>
+    <body>
+        <!-- Creates a table with a border -->
+        <table border>
+
+            <!-- Table title -->
+            <caption>Food Menu</caption>
+
+            <!-- Table header section -->
+            <thead>
+                <tr>
+                    <!-- 'Item' spans 2 rows vertically -->
+                    <th rowspan="2">Item</th>
+
+                    <!-- 'Price' spans 2 columns horizontally -->
+                    <th colspan="2">Price</th> 
+                </tr>
+                <tr>
+                    <!-- Sub-columns under 'Price' -->
+                    <td>INR</td> <!-- Price in Indian Rupees -->
+                    <td>USD</td> <!-- Price in US Dollars -->
+                </tr>
+            </thead>
+
+            <!-- Table body with food items and their prices -->
+            <tbody>
+                <tr>
+                    <td>Frooti</td>
+                    <td>10</td>
+                    <td>0.14</td>
+                </tr>
+
+                <tr>
+                    <td>Samosa</td>
+                    <td>12</td>
+                    <td>0.17</td>
+                </tr>
+
+                <tr>
+                    <td>Chips</td>
+                    <td>20</td>
+                    <td>0.28</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

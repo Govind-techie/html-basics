@@ -1,0 +1,57 @@
+<!-- 
+Practice Qs :– Table with Merged Cells
+
+Create a table with:
+- Caption: "A test table with merged cell"
+- Header:
+  - Blank top-left cell
+  - "Average" spanning 2 columns
+  - "Red Eyes" spanning 2 rows
+- Second header row: "Height", "Weight"
+- Body rows:
+  - Males → 1.9, 0.003, 40%
+  - Females → 1.7, 0.002, 43%
+- Use the 'border' attribute (no CSS)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table border>
+            <caption>A test table with merged cell</caption>
+
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="2">Average</th>
+                    <th rowspan="2">Red Eyes</th>
+                </tr>
+
+                <tr>
+                    <td>Height</td>
+                    <td>Weight</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Males</td>
+                    <td>1.9</td>
+                    <td>0.003</td>
+                    <td>40%</td>
+                </tr>
+                <tr>
+                    <td>Females</td>
+                    <td>1.7</td>
+                    <td>0.002</td>
+                    <td>43%</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

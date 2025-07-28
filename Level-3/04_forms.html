@@ -1,0 +1,315 @@
+<!--
+HTML Forms
+
+<form>       : Main container for form elements
+action       : URL where the form data is sent
+method       : HTTP method - "GET" or "POST"
+
+<input>      : Collects user input (type defines its behavior)
+  type="text"       : Single-line text input
+  type="password"   : Hides typed characters
+  type="email"      : Validates email format
+  type="number"     : Accepts numeric values
+  type="radio"      : Select one option from a group
+  type="checkbox"   : Select multiple options
+  type="submit"     : Submit the form
+  type="reset"      : Reset all form fields
+
+<label>      : Associates text with an input field (use 'for' + input id)
+<textarea>   : Multi-line text input (e.g., feedback, bio)
+<select>     : Dropdown menu
+<option>     : Individual option inside a select menu
+
+<button>     : Clickable button (commonly used for submit/reset)
+  type="submit"  : Submit form
+  type="reset"   : Clear form
+
+<fieldset>   : Groups related inputs inside a box (optional)
+<legend>     : Title for a <fieldset> group
+
+Common Attributes:
+  name       : Key used to send data to the backend
+  id         : Unique identifier, links with <label>
+  placeholder: Hint text inside input
+  required   : Field must be filled before submitting
+  value      : Default/predefined value
+  disabled   : Field is shown but not usable
+  readonly   : Field is visible but not editable
+  autocomplete: Enables/disables autofill
+
+Best Practices:
+- Always use 'name' for backend data handling
+- Use <label> for accessibility
+- Use proper input types for validation (e.g., email, number)
+- Avoid nesting forms
+- Structure complex forms with <fieldset> and <legend>
+
+Note => Forms are used to collect data from the user
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms HTML</title>
+    </head>
+    <body>
+        <form action="/action">
+
+            <!--
+            Input Elements
+            • used to create multiple form controls
+            • there are multiple types of inputs that can be created using type attribute
+            -->
+
+            <!-- 
+            Using <label> to wrap both the label text and the input together.
+            The 'for' attribute is set to match the input's 'id', linking them.
+            When the user clicks on the label "Username", the cursor jumps to the input box.
+            Used type="text" for general text input.
+            Added name="username" to help identify this field in form submission.
+            Placeholder gives a hint about what to enter.
+            -->
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+
+
+            <!-- 
+            Used <label> for the "Age" input and linked it using for="age" and id="age".
+            Used type="number" to restrict the input to numeric values.
+            Added name="age" so the backend can recognize this input.
+            Placeholder shows a sample input like "Enter your age".
+            -->
+            <div>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age">
+            </div>
+
+            <!-- 
+            Used <label> for "Password" and connected it using for="password" and id="password".
+            Used type="password" so input characters are hidden.
+            name="password" identifies the field when the form is submitted.
+            Placeholder gives a hint to the user.
+            -->
+            <div>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+
+
+            <!-- 
+            Label "Time" is linked to the input using for="time" and id="time".
+            Used type="time" to allow users to select a specific time via UI clock.
+            name="time" helps backends understand this is a time-related input.
+            No placeholder is needed, as time picker already guides the input format.
+            -->
+            <div>
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time">
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit">Submit</button> 
+                <!-- 
+                type="submit" triggers the default form submission.
+                It sends the form data to the backend when used inside a <form>.
+                -->
+            </div>
+
+            <!-- Reset Button -->
+            <div>
+                <button type="reset">Reset</button>
+                <!-- 
+                type="reset" clears all input fields in the form back to their default values.
+                It only works when used inside a <form>.
+                -->
+            </div>
+
+            <!-- Button (Custom Use) -->
+            <div>
+                <button type="button">Button</button>
+                <!-- 
+                type="button" does nothing by default.
+                It's used when you want to add custom functionality using JavaScript later.
+                -->
+            </div>
+
+            <!-- Input Element (Button) -->
+            <div>
+                <!-- 
+                type="button" creates a clickable button.
+                It doesn't perform any action by default.
+                You can add custom functionality later using JavaScript.
+                -->
+                <input type="button" value="Click Me">
+
+                <!-- 
+                type="reset" clears all the input fields in the form.
+                It only works inside a <form> and resets fields to their initial values.
+                -->
+                <input type="reset" value="Reset">
+
+                <!-- 
+                type="submit" triggers form submission.
+                It sends all input data to the URL specified in the <form>'s action attribute.
+                -->
+                <input type="submit" value="Submit">
+            </div>
+            
+            <!-- 
+            Note: Both `name` and `id` attributes should be unique within a form.
+            - `name` is used when submitting form data to the backend, helping identify each field.
+            - `id` is used to uniquely target elements with CSS, JavaScript, or link them with <label> using the `for` attribute.
+            -->
+
+            <!-- Checkbox (Input Element)-->
+            <div>
+                <input type="checkbox" name="age" id="verify" checked> <!-- Note: Use the 'checked' attribute to make a checkbox selected by default, but still editable by the user -->
+                <label for="verify">I am 18<sup>+</sup></label>  
+            </div>
+
+            <!-- Note: When a checkbox is checked, its value is sent with the form (default is "on" if no value is set). 
+                 If it's unchecked, nothing is sent to the action URL. -->
+            
+            <!-- 
+            Best Practice: Always associate text with an input using a <label> tag.
+            This improves accessibility, usability, and user experience.
+            When you want to display descriptive text next to an input (like "Username:"), 
+            use a <label> element linked to the input using the 'for' attribute.
+            -->
+
+            <!-- Radio Button (Input Element) -->
+            
+            <div>
+                <!-- 
+                    Radio button input for selecting 'Male'.
+                    - type="radio": defines it as a radio button.
+                    - name="gender": all options share the same name, so only one can be selected at a time.
+                    - id="male": uniquely identifies this input (used to link with the label).
+                    - value="male": this is what gets sent in the form data if this option is selected.
+                -->
+                <input type="radio" name="gender" id="male" value="male">
+                
+                <!-- 
+                    Label for the 'Male' radio button.
+                    - for="male": associates this label with the input that has id="male".
+                    - Clicking the label also selects the radio button.
+                -->
+                <label for="male">Male</label>
+                <br>
+
+                <!-- Radio button for 'Female' with similar structure -->
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <br>
+
+                <!-- Radio button for 'Other' with similar structure -->
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other">Other</label>
+
+            </div>
+
+            <!-- Note: 'name' groups radio buttons so selecting one deselects the others. -->
+
+
+            <!-- Note: Unlike checkboxes, radio buttons allow only one option to be selected at a time. 
+                 They are used when only a single choice is allowed among multiple options. -->
+
+
+            <!-- Select Element (Dropdown) -->
+                    
+            <div>
+
+                <!-- 'select' creates a dropdown menu. 
+                    The 'name' attribute is used when submitting the form,
+                    and 'id' is useful for linking with a <label>. -->
+                <select name="profession" id="profession">
+                    
+                    <!-- Placeholder-like option:
+                        - 'value=""' ensures no value is submitted if this is selected.
+                        - 'disabled' makes it unselectable as a valid choice.
+                        - 'selected' makes it show up by default.
+                        - 'hidden' hides it from the dropdown list after selection.
+                        # This is the common trick to simulate a placeholder in <select>. -->
+                    <option value="" disabled selected hidden>Select Your Option</option>
+                    
+                    <!-- Actual selectable options with values for form submission -->
+                    <option value="stu">Student</option>
+                    <option value="gra">Graduate</option>
+                    <option value="dev">Developer</option>
+                </select>
+            </div>
+
+            <!-- Range (Input Element) -->
+
+            <div>
+                <!-- Label associated with the range input -->
+                <label for="volume">Volume Control</label>
+                
+                <!-- 'type="range"' creates a slider control.
+                    - 'id' links it with the label.
+                    - 'name' is used when submitting the value in a form.
+                    - 'min' and 'max' define the range limits.
+                    - 'step' defines how much the value increases/decreases.
+                    - 'value' sets the default (starting) position of the slider.
+                    # The actual numeric value can be accessed or submitted just like text inputs. -->
+                <input type="range" id="volume" name="volume" min="0" max="100" step="1" value="50">
+            </div>
+
+            <!-- Text Area -->
+            <div>
+                <!-- Label for the textarea to explain what input is expected from the user -->
+                <label for="feedback">We'd love to hear your thoughts! Please share your feedback below:</label>
+                
+                <!-- 
+                'textarea' is used for multi-line text input.
+
+                - 'name'       → Acts as the key when the form is submitted (used in backend).
+                - 'id'         → Links the textarea with a corresponding <label> using the 'for' attribute.
+                - 'placeholder'→ Shows hint text inside the box before user types anything.
+                - 'rows'       → Controls the visible height of the textarea in number of lines (e.g., 4 lines).
+                - 'cols'       → Controls the visible width of the textarea in number of character columns (e.g., 40 characters wide).
+                - 'maxlength'  → Limits the total number of characters a user can type in the textarea.
+                -->
+                
+                <textarea name="feedback" id="feedback" rows="10" cols="40" maxlength="200" placeholder="Write your feedback here..."></textarea>
+            </div>
+
+            </form>
+
+            <hr>
+
+            <h3>Search on Youtube</h3>
+
+            <!-- This is a form that sends a search query to YouTube -->
+            <form action="https://www.youtube.com/results" method="get"> 
+
+            <!-- 
+            'action' specifies where the form data will be sent.
+            In this case, it's YouTube's search results page.
+            'method="get"' means the data will be sent through the URL as a query string.
+            (This is the default method, but it's good practice to include it explicitly.)
+            -->
+
+            <!-- 
+            This is a text input field where the user types their search query.
+            The 'name' attribute is VERY important: YouTube expects 'search_query' as the key.
+            So when you type "HTML tutorial", the final URL will be:
+            https://www.youtube.com/results?search_query=HTML+tutorial
+            -->
+            <input type="text" placeholder="Search" name="search_query">
+
+            <!-- 
+            This is the submit button that sends the form data to the 'action' URL.
+            When clicked, the form is submitted and the user is redirected to YouTube results.
+            -->
+            <button type="submit">Submit</button>
+        </form>  
+
+    </body>
+</html>
