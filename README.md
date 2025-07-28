@@ -45,3 +45,42 @@ This level introduces layout concepts, semantic structure, inline vs block eleme
 - Practice Questions  
 
 ---
+
+### 📙 Level 3: Tables & Forms
+
+This level covers more advanced HTML structures like tables, form handling, input types, and interactive elements, along with hands-on practice problems.
+
+#### 📋 Tables:
+- Creating Tables with `<table>`, `<tr>`, `<td>`, `<th>`  
+- Table Headers and Captions  
+- `rowspan` and `colspan` for complex table structures  
+- Styling Tables with attributes like `border`, `align`, etc.  
+- Real-world Table Examples (e.g., Student Info Table)
+
+#### 🧾 Forms:
+- Building Forms with `<form>`  
+- Input Elements:
+  - Text (`<input type="text">`)  
+  - Password  
+  - Email  
+  - Number  
+  - Date  
+  - Radio Buttons  
+  - Checkboxes  
+  - File Upload  
+  - Color Picker  
+  - Range Slider  
+  - Textarea  
+  - Select Dropdown  
+- Labels and Accessibility  
+- Fieldsets and Legends  
+- Submit, Reset, and Button Elements  
+- Using `name`, `placeholder`, `required`, `maxlength`, `rows`, `cols`, etc.
+
+#### 🧠 Practice Problems:
+- Create a Student Registration Form  
+- Design a Feedback Form  
+- Build a Product Table with merged rows/columns  
+- Replicate a Job Application Layout using only HTML  
+
+---
